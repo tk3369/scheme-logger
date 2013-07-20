@@ -1,0 +1,7 @@
+(compile -s logger.scm -J)
+(compile -s logger.import.scm)
+
+(install-extension
+ 'logger
+ '("logger.so" "logger.import.so")
+ '((version "1.0")))

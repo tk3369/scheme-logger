@@ -1,0 +1,2 @@
+(repo git "http://ahsmart.com/git/{egg-name}.git")
+(uri meta-file "http://ahsmart.com/cgi-bin/gitweb.cgi/{egg-name}.git/blob_plain/HEAD:/{egg-name}.meta")

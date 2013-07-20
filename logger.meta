@@ -1,0 +1,6 @@
+((license "BSD")
+ (category debugging)
+ (needs srfi-34)
+ (test-depends test srfi-78)
+ (author "Tom Kwong")
+ (synopsis "A simple logging facility"))
