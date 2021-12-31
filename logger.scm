@@ -14,9 +14,8 @@
 ;; (log-info "Just an FYI: That thing happened.")
 ;; (log-warning "Something bad happened, but i handled it.")
 ;; (log-error "Something bad happened and I don't feel good.")
-;; @author Tom Kwong
-;; @copyright 2013 All rights reserved
 ;;
+;; @author Tom Kwong and contributors
 ;; Updated to Chicken 5.x Dec 2021 by masukomi
 
 (module logger 
