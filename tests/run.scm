@@ -1,7 +1,7 @@
-(use srfi-78)
+(import srfi-78)
 (check-set-mode! 'summary)
 
-(use logger)
+(import logger)
 
 ;; test output to console
 (log-set-verbosity! 'debug)

@@ -2,12 +2,22 @@
 ;; A simple logging facility
 ;;
 ;; Sample usage:
-;; (use logger)
-;; (log-set-verbosity! 'debug) ;; any of '(error warning info debug)
 ;;
+;; (import logger)
+;; ; set your logging level to one of the following
+;; ; 'debug 'info 'warning 'error
+;; (log-set-verbosity! 'testing)
+;; ; optionally log to a file
+;; (log-set-output-file! "path/to/log_file.log")
+;; ; log a message
+;; (log-debug "Here's a debugging message.")
+;; (log-info "Just an FYI: That thing happened.")
+;; (log-warning "Something bad happened, but i handled it.")
+;; (log-error "Something bad happened and I don't feel good.")
 ;; @author Tom Kwong
 ;; @copyright 2013 All rights reserved
 ;;
+;; Updated to Chicken 5.x Dec 2021 by masukomi
 
 (module logger 
 	(log-debug log-info log-warning log-error
@@ -15,10 +25,14 @@
 	 log-set-logger! 
 	 log-set-output-file!
 	 log-reset-output-port!)
-	
-(import scheme chicken)
-(use srfi-1)
-(use posix)
+
+  (import chicken.base)
+  (import chicken.condition)
+  (import chicken.format)
+  (import chicken.time)
+  (import chicken.time.posix)
+  (import scheme)
+  (import srfi-1)
 
 ;; this private function requires posix
 (define (%current-datetime-string)

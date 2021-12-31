@@ -1,0 +1,9 @@
+.DS_Store
+.idea
+*.log
+*.import.scm
+*.link
+*.o
+tmp/
+
+
